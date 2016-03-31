@@ -379,6 +379,13 @@ class Controller(object):
             self.moveIndex(-1)
         elif key == 'DOWN' or key == 'j':
             self.moveIndex(1)
+        elif key == 'LEFT':
+            self.setSelect(False)
+            if self.hoverIndex != 0:
+                self.moveIndex(-1)
+        elif key == 'RIGHT':
+            self.setSelect(True)
+            self.moveIndex(1)
         elif key == 'x':
             self.toggleXMode()
         elif key == 'c':
